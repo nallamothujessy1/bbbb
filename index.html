@@ -773,10 +773,11 @@
     <div class="audio-card">
       <span class="track-label">A little something</span>
       <div class="track-title">A voice note, just for you</div>
-      <audio controls>
-        <source src="voicenote.ogg" type="audio/mpeg">
-        Your browser can't play this audio — but the wish still counts.
-      </audio>
+      <audio controls preload="auto">
+  <source src="voicenote.ogg" type="audio/ogg">
+  Your browser does not support this audio file.
+</audio>
+
     </div>
   </div>
 
@@ -800,10 +801,6 @@
 </button>
 <audio id="bg-song" loop preload="none">
   <source src="wanna-be-yours.mp3" type="audio/mpeg">
-</audio>
-
-<audio id="bg-song" loop preload="none">
-  <source src="voice-note.mp3" type="audio/mpeg">
 </audio>
 
 <script>
