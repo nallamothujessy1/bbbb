@@ -256,6 +256,23 @@
   text-align:left;
   max-height:75vh;
   overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+  .memory-card::-webkit-scrollbar{
+  width:6px;
+}
+.memory-card::-webkit-scrollbar-track{
+  background:rgba(244,200,116,0.1);
+  border-radius:10px;
+}
+.memory-card::-webkit-scrollbar-thumb{
+  background:rgba(244,200,116,0.5);
+  border-radius:10px;
+}
+.memory-card::-webkit-scrollbar-thumb:hover{
+  background:rgba(244,200,116,0.8);
 }
   .memory-card.open{
     transform:translate(-50%, 0);
@@ -305,13 +322,12 @@
   .memory-card p{
   color:var(--starlight-dim);
   font-weight:300;
-  font-size:0.90rem;
-  line-height:1.6;
+  font-size:0.95rem;
+  line-height:1.7;
+  white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  white-space: normal;
-  max-width: 100%;
-  display: block;
+  flex-shrink:0;
 }
 
   .memory-card .close-card{
