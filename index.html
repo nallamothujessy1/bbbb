@@ -597,6 +597,15 @@
     border:1px solid rgba(244,200,116,0.18);
     border-radius:999px;
     backdrop-filter:blur(6px);
+    transition:opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Hide only Back / Next navigation while a memory card is open */
+  body.card-open .page-nav{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translate(-50%, 12px);
   }
 
   .nav-btn{
@@ -797,6 +806,10 @@
   <source src="wanna-be-yours.mp3" type="audio/mpeg">
 </audio>
 
+<audio id="bg-song" loop preload="none">
+  <source src="voice-note.mp3" type="audio/mpeg">
+</audio>
+
 <script>
 /* ============ BACKGROUND TWINKLING STARS (canvas) ============ */
 (function(){
@@ -985,6 +998,7 @@ document.addEventListener('keydown', (e) => {
 
   function openCard(m){
     closeCard();
+    document.body.classList.add('card-open');
     card = document.createElement('div');
     card.className = 'memory-card';
     card.innerHTML = `
@@ -1004,6 +1018,7 @@ document.addEventListener('keydown', (e) => {
   function closeCard(){
     if(!card) return;
     card.classList.remove('open');
+    document.body.classList.remove('card-open');
     const old = card;
     setTimeout(() => old.remove(), 550);
     card = null;
