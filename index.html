@@ -241,22 +241,22 @@
   }
 
   .memory-card{
-    position:fixed;
-    left:50%;
-    bottom:0;
-    transform:translate(-50%, 100%);
-    width:min(480px, 92vw);
-    max-height:70vh;
-    overflow-y:auto;
-    background:linear-gradient(180deg, rgba(18,26,46,0.97), rgba(10,14,23,0.99));
-    border:1px solid rgba(244,200,116,0.25);
-    border-radius:18px 18px 0 0;
-    padding:1.8rem 1.8rem 2.2rem;
-    box-shadow:0 -10px 50px rgba(0,0,0,0.5);
-    z-index:20;
-    transition:transform 0.55s cubic-bezier(.2,.8,.2,1);
-    text-align:left;
-  }
+  position:fixed;
+  left:50%;
+  bottom:0;
+  transform:translate(-50%, 100%);
+  width:min(480px, 92vw);
+  background:linear-gradient(180deg, rgba(18,26,46,0.97), rgba(10,14,23,0.99));
+  border:1px solid rgba(244,200,116,0.25);
+  border-radius:18px 18px 0 0;
+  padding:1.8rem 1.8rem 2.2rem;
+  box-shadow:0 -10px 50px rgba(0,0,0,0.5);
+  z-index:20;
+  transition:transform 0.55s cubic-bezier(.2,.8,.2,1);
+  text-align:left;
+  max-height:75vh;
+  overflow-y:auto;
+}
   .memory-card.open{
     transform:translate(-50%, 0);
   }
@@ -303,13 +303,16 @@
   }
 
   .memory-card p{
-    color:var(--starlight-dim);
-    font-weight:300;
-    font-size:0.95rem;
-    line-height:1.7;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
+  color:var(--starlight-dim);
+  font-weight:300;
+  font-size:0.90rem;
+  line-height:1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+  display: block;
+}
 
   .memory-card .close-card{
     position:absolute;
